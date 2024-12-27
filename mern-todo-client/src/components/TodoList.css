@@ -1,0 +1,359 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Todo Container */
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f4f7fc;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+.todo-header {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+.logout-button {
+    padding: 6px 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: auto;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+}
+
+/* Todo Form */
+.todo-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.todo-input {
+    width: 250px;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 12px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.todo-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.date-picker {
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    margin-left: 12px;
+    transition: border-color 0.3s ease;
+}
+
+.date-picker:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.todo-button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.todo-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Todo List */
+.todo-list {
+    list-style-type: none;
+    width: 100%;
+    max-width: 450px;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    flex-direction: column; /* Align items vertically */
+}
+
+.todo-item:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.03);
+}
+
+.todo-text {
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+    flex: 1;
+    white-space: normal;
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+.todo-text.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Button styling */
+.todo-item button {
+    background-color: #007bff;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.todo-item button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Important Todo styling */
+.todo-item.important {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+}
+
+.todo-item.important .todo-text {
+    font-weight: bold;
+}
+
+/* Button for marking as important */
+.todo-item button:nth-child(4) {
+    background-color: #ffc107;
+    color: white;
+}
+
+.todo-item button:nth-child(4):hover {
+    background-color: #e0a800;
+    transform: scale(1.1);
+}
+
+/* Flex for buttons to be horizontally aligned */
+.todo-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.todo-buttons button {
+    flex: 0 1 auto;
+}
+
+/* Search Box Styling */
+.search-input {
+    width: 250px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Sort Buttons Styling */
+.sort-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.sort-buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.sort-buttons button:hover {
+    transform: scale(1.05);
+}
+
+/* Different Colors for Sort Buttons */
+.sort-buttons button:nth-child(1) {
+    background-color: #28a745; /* Green for 'Important' */
+    color: white;
+}
+
+.sort-buttons button:nth-child(1):hover {
+    background-color: #218838;
+}
+
+.sort-buttons button:nth-child(2) {
+    background-color: #17a2b8; /* Blue for 'Completed' */
+    color: white;
+}
+
+.sort-buttons button:nth-child(2):hover {
+    background-color: #138496;
+}
+
+.sort-buttons button:nth-child(3) {
+    background-color: #ffc107; /* Yellow for 'Deadline' */
+    color: white;
+}
+
+.sort-buttons button:nth-child(3):hover {
+    background-color: #e0a800;
+}
+
+/* Collaborators Section */
+.collaborators {
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.collaborators h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.collaborators ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.collaborators li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.collaborators input {
+    width: 80%;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.collaborators input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.collaborators button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.collaborators button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .todo-input {
+        width: 70%;
+    }
+
+    .todo-button {
+        width: 70%;
+    }
+
+    .todo-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .todo-item button {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .search-input {
+        width: 70%;
+    }
+
+    .sort-buttons button {
+        width: 100%;
+    }
+
+    .collaborators input {
+        width: 100%;
+    }
+}

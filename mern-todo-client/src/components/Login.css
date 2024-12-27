@@ -1,0 +1,92 @@
+/* Container for the login page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5; /* Light background for the whole page */
+  }
+  
+  /* Style for the form container */
+  .login-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Heading style */
+  .login-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Input fields */
+  .login-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Input focus effect */
+  .login-form input:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  /* Submit button */
+  .login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF; /* Blue background */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  .login-form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Add some spacing around the form */
+  .login-form .form-group {
+    margin-bottom: 15px;
+  }
+
+  .error-message {
+    color: red;
+    margin-bottom: 20px;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+  }
+  /* Add to your Login.css */
+.signup-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .signup-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  
