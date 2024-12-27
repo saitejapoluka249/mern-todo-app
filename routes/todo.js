@@ -11,13 +11,13 @@ const sendEmailNotification = async (collaboratorEmail, todoText) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'saitejapoluka249@gmail.com',
-      pass: 'grse eyba cfqr yelx'
+      user: 'add email here,
+      pass: 'Add web application password from your gmail'
     }
   });
 
   const mailOptions = {
-    from: 'saitejapoluka249@gmail.com',
+    from: 'add email here',
     to: collaboratorEmail,
     subject: 'Collaborator Notification',
     text: `You have been added as a collaborator for the Todo: "${todoText}".`
